@@ -1,13 +1,10 @@
-## Your PyBites Code Archive
+# My PyBites Code Archive
 
-In this zipfile you will find all the code you submitted on the platform.
-Note that we rotate "bite saves" so you will find max. last 5 commits per Bite.
-Each filename also shows if the submission passed or failed on our platform.
+This repo contains all the code submitted by me on the PyBites platform [codechalleng.es/](https://codechalleng.es/) as part of my [#100DaysOfCode](https://codechalleng.es/100days/mhered8b899449424048c5/8180) challenge between October and December 2022.
+Each folder contains the last 5 commits per Bite and any notes submitted. The filename shows if the submission passed or failed on the platform.
 
-We hope you collected a lot of Pythonic snippets along the way to show of your Python ninja skills!
+## To do
 
-Please let us know if you have ideas / needs for new Bites.
-You can use the "What intro Bites would you like to see here?" comment boxes for each Bite level here:
-https://codechalleng.es/bites/ - cheers!
-
-Keep calm and code in Python!
+- [ ] scrape my [public profile page](https://codechalleng.es/profiles/mhered8b899449424048c5) to get a table of the bites, dates, number of submissions, points etc
+- [ ] make a table with links to the bites on the platform and the code on my repo
+- [ ] make graphs with the progress
