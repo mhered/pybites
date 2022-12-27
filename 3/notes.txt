@@ -1,0 +1,3 @@
+To note: 
+1) They created a dict from scrabble_scores. Nice! Investigate the use of .get()...
+2) Wow the simplicity of the solution: max(words, key=calc_word_value) !

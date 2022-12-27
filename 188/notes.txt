@@ -1,0 +1,3 @@
+Worth exploring further: 
+1) use of yield when reading the file to create a generator. Advantages? 
+2) use of STATS_OUTPUT.format(**stats) to fill variables in a formatted string with fields of a dict. How does it work?

@@ -1,0 +1,6 @@
+my solution was utter crap. Check out .find(), .get(), .find_next_sibling(), .select_one() and possibly others!
+Also  .get_text() gets rid of the extra .strip() 
+
+From the Forum:
+- See https://www.crummy.com/software/BeautifulSoup/bs4/doc/#css-selectors for the docs of selectors
+- no need for .get('src'), it's actually possible to access the attribute values with the dict notation e.g. ['src']
