@@ -7,7 +7,15 @@ In [archive/](./archive/) each folder contains the last 5 commits submitted for 
 
 - [x] scrape my [public profile page](https://codechalleng.es/profiles/mhered8b899449424048c5) to get the bites, dates, number of submissions, points etc
 - [x] make a table with links to the bites on the platform and the code on my repo
-- [ ] make graphs with the progress
+- [x] make graphs with the progress
+- [ ] add tests
+- [ ] Issue: check inconsistency between platform and script on days with no bites
+- [ ] Issue: enquire why scraping does not work
+- [ ] alternatively use [JSON downloaded from the platform](./my_code.json) as input
+
+## Progress graph
+
+![progress_graph](/run/user/1000/doc/53d60eae/progress_graph.png)
 
 ## List of Bites
 
