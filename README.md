@@ -15,7 +15,7 @@ In [archive/](./archive/) each folder contains the last 5 commits submitted for 
 
 ## Progress graph
 
-![progress_graph](/run/user/1000/doc/53d60eae/progress_graph.png)
+![progress_graph](./assets/images/progress_graph.png)
 
 ## List of Bites
 
