@@ -1,7 +1,7 @@
 # My PyBites Code Archive
 
 This repo contains all the code submitted by me on the PyBites platform [codechalleng.es/](https://codechalleng.es/) as part of my [#100DaysOfCode](https://codechalleng.es/100days/mhered8b899449424048c5/8180) challenge between October and December 2022.
-In archive/ each folder contains the last 5 commits submitted for the Bite along with any notes. The filenames show if the submission passed or failed on the platform.
+In [archive/](./archive/) each folder contains the last 5 commits submitted for the Bite along with any notes. The filenames show if the submission passed or failed on the platform.
 
 ## To do
 
