@@ -1,19 +1,13 @@
 from bs4 import BeautifulSoup as Soup
-
 from pathlib import Path
-
 from collections import namedtuple
-
 from datetime import datetime
-
 from dateutil.parser import parse
-
 from pprint import pprint
-
 import re
 
 # import requests
-# # PROFILE = 'https://codechalleng.es/profiles/mhered8b899449424048c5'
+# PROFILE = 'https://codechalleng.es/profiles/mhered8b899449424048c5'
 # CONTENT = requests.get(PROFILE).text
 # does not work because the table is not in the HTML...
 # instead I copied the HTML manually to a local file
@@ -34,7 +28,7 @@ def get_bites():
         title = fields[0].text.strip()
         platform_link = f"https://codechalleng.es{fields[0].a['href']}"
         bite_num = re.findall(r'\d+', fields[0].a['href'])[0]
-        repo_link = f'./{bite_num}/'
+        repo_link = f'./archive/{bite_num}/'
         completed = parse(fields[1].text)
         score = int(fields[3].text)
         submits = int(fields[4].text)
@@ -44,10 +38,10 @@ def get_bites():
 
 def print_bites(bites):
     longest = max(bites, key = lambda x:len(x.title + x.platform_link))
-    longest = len(longest.title + longest.platform_link) +4
+    longest = len(longest.title + longest.platform_link) + 6
     for bite in bites:
         title = f"[{bite.title}]({bite.platform_link})"
-        print(f" | {title:<{longest}s} | [my code]({bite.repo_link}) | {bite.completed.strftime('%d/%m/%Y')} | {bite.score:>2} | {bite.submits:>2} | ")
+        print(f" | {title:<{longest}s} | [my code]({bite.repo_link:>7}) | {bite.completed.strftime('%d/%m/%Y')} | {bite.score:>2} | {bite.submits:>2} | ")
 
 if __name__ == "__main__":
     bites = get_bites()
