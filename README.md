@@ -1,23 +1,41 @@
 # My PyBites Code Archive
 
-This repo contains all the code submitted by me on the PyBites platform [codechalleng.es/](https://codechalleng.es/) as part of my [#100DaysOfCode](https://codechalleng.es/100days/mhered8b899449424048c5/8180) challenge between October and December 2022.
-In [archive/](./archive/) each folder contains the last 5 commits submitted for the Bite along with any notes. The filenames show if the submission passed or failed on the platform.
+This repo contains all the code submitted by me on the PyBites platform [https://codechalleng.es/](https://codechalleng.es/) as part of my [#100DaysOfCode](https://codechalleng.es/100days/mhered8b899449424048c5/8180) challenge between October and December 2022.
+In [./archive/](./archive/) each folder contains the last 5 commits submitted for the Bite along with any notes. The filenames show if the submission passed or failed on the platform.
+
+[main.py](./main.py) contains a script used to make this **README.md** a bit friendlier:
+
+* `get_bites()` : scrape [a static local copy of my public profile page](./profile.html) to get the bites, dates, number of submissions, points etc. Makes a Soup object, parses the relevant HTML sections, and returns a list of Bite namedtuples
+* `print_markdown_table_of()` : receive a list of Bite namedtuples and print in stdout rows formatted as Markdown ready to copy & paste, see **Table of Contents** below
+* `plot_graph_of()` : receive a list of Bite namedtuples and plot a  daily graph of bites completed and points gained (accumulated) since the start. See **Progress Graph** below
 
 ## To do
 
-- [x] scrape my [public profile page](https://codechalleng.es/profiles/mhered8b899449424048c5) to get the bites, dates, number of submissions, points etc
+- [x] scrape my [public profile page](https://codechalleng.es/profiles/mhered8b899449424048c5) to get the bites, dates, number of submissions, points etc. 
 - [x] make a table with links to the bites on the platform and the code on my repo
 - [x] make graphs with the progress
+- [x] freeze dependencies. Used [`pipreqs`](https://pypi.org/project/pipreqs/) (see [repo](https://github.com/bndr/pipreqs)). Note: need to ignore [./archive/](./archive/) otherwise it attempts to add all imports from the bites (not installed)
+
+```bash
+$ python3 -m pipreqs.pipreqs . --ignore archive --force
+```
+
 - [ ] add tests
-- [ ] Issue: check inconsistency between platform and script on days with no bites
-- [ ] Issue: enquire why scraping does not work
+- [ ] Issue: clarify inconsistency between platform and script counting days with no bites (see comments in [main.py](./main.py) maybe caused by naive datetimes?)
+- [ ] Issue: enquire why scraping directly the [public profile page](https://codechalleng.es/profiles/mhered8b899449424048c5) does not work
 - [ ] alternatively use [JSON downloaded from the platform](./my_code.json) as input
+
+## Dependencies
+
+Used `venv` and `pipreqs`
+
+See [requirements.txt](./requirements.txt)
 
 ## Progress graph
 
 ![progress_graph](./assets/images/progress_graph.png)
 
-## List of Bites
+## Table of Contents: List of Bites
 
 | Bite | Folder | Date | Points | Submissions |
 | ---- | ------ | ---- | ------ | ----------- |
